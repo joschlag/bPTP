@@ -20,9 +20,9 @@ RUN apt-get install -y --no-install-recommends \
         libbz2-dev \
         locales \
         zlib1g-dev \
-        xserver-xorg \ 
+        xserver-xorg \
         xdm \
-        xfonts-base \ 
+        xfonts-base \
         xfonts-100dpi \
         xfonts-75dpi \
         libqt5x11extras5
