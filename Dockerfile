@@ -27,9 +27,10 @@ RUN apt install -y git make g++ libgsl-dev \
 	libqt5x11extras5
 RUN apt-get -y install apt-transport-https
 RUN export QT_DEBUG_PLUGINS=1
-RUN export QT_QPA_PLATFORM=offscreen
+RUN export DISPLAY=0.0 
+#RUN export QT_QPA_PLATFORM=offscreen
 RUN apt clean
-RUN apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
+#RUN apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
 
 # Locales
 RUN locale-gen en_GB.UTF-8
