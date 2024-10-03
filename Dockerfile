@@ -29,10 +29,7 @@ RUN apt-get -y install apt-transport-https
 RUN export QT_DEBUG_PLUGINS=1
 RUN export QT_QPA_PLATFORM=offscreen
 RUN apt clean
-
-RUN pip uninstall opencv-python
-RUN pip install opencv-python-headless
-
+RUN apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
 
 # Locales
 RUN locale-gen en_GB.UTF-8
