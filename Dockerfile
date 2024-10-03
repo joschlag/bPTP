@@ -26,8 +26,12 @@ RUN apt install -y git make g++ libgsl-dev \
 	xfonts-75dpi \
 	libqt5x11extras5
 RUN apt-get -y install apt-transport-https
+RUN export QT_DEBUG_PLUGINS=1
 RUN export QT_QPA_PLATFORM=offscreen
 RUN apt clean
+
+RUN pip uninstall opencv-python
+RUN pip install opencv-python-headless
 
 
 # Locales
