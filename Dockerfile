@@ -26,7 +26,9 @@ RUN apt install -y git make g++ libgsl-dev \
 	xfonts-75dpi \
 	libqt5x11extras5
 RUN apt-get -y install apt-transport-https
+RUN apt-get install --reinstall libxcb
 RUN apt clean
+
 
 # Locales
 RUN locale-gen en_GB.UTF-8
