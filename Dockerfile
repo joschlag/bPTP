@@ -69,7 +69,3 @@ RUN python3 setup.py install
 WORKDIR /usr/src/PTP/bin
 
 ENV PATH=${PATH}:/usr/src/PTP/bin
-
-COPY . /app
-WORKDIR /app
-RUN python3 setup.py install
