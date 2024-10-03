@@ -1,6 +1,6 @@
 # bPTP
 
-Ubuntu 24.04
+Ubuntu 18.04
 
 A Bayesian implementation of the Poisson tree processes (PTP) model for species delimitation.
 https://github.com/zhangjiajie/PTP.git
