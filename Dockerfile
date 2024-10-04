@@ -30,11 +30,11 @@ RUN apt-get -y install apt-transport-https
 
 #the follwoing rows are for testing to remove the xcb error
 RUN export QT_DEBUG_PLUGINS=1
+
 #RUN export QT_QPA_PLATFORM=offscreen
 #RUN apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
-RUN apt-get install -y libxcb-util-dev
-ENV DISPLAY=:0
-
+#RUN apt-get install -y libxcb-util-dev
+#ENV DISPLAY=:0
 RUN apt clean
 
 # Locales
@@ -66,7 +66,7 @@ RUN pip3 install wheel
 RUN pip3 install numpy scipy docutils six pytest matplotlib lxml PyQt5 ete3
 
 COPY . /app
-
+ENV QT_QPA_PLATFORM=minimal 
 WORKDIR /usr/src
 
 RUN git clone https://github.com/zhangjiajie/PTP.git
