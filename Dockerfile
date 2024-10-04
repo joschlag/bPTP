@@ -26,15 +26,7 @@ RUN apt install -y git make g++ libgsl-dev \
 	xfonts-75dpi \
 	libqt5x11extras5
 RUN apt-get -y install apt-transport-https
-
-
-#the follwoing rows are for testing to remove the xcb error
-RUN export QT_DEBUG_PLUGINS=1
-
-#RUN export QT_QPA_PLATFORM=offscreen
-#RUN apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
-#RUN apt-get install -y libxcb-util-dev
-#ENV DISPLAY=:0
+#RUN export QT_DEBUG_PLUGINS=1
 RUN apt clean
 
 # Locales
